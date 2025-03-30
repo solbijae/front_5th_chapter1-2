@@ -1,6 +1,6 @@
 export function normalizeVNode(vNode) {
   // vNode가 null, undefined 또는 boolean 타입일 경우 빈 문자열을 반환합니다.
-  if (vNode === null || vNode === undefined) {
+  if (vNode === null || vNode === undefined || typeof vNode === "boolean") {
     return "";
   }
   // vNode가 문자열 또는 숫자일 경우 문자열로 변환하여 반환합니다.
