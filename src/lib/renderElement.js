@@ -11,7 +11,7 @@ export function renderElement(vNode, container) {
   const element = createElement(normalizedVNode);
 
   // container에 삽입하고
-  container.appendChild(element);
+  container.replaceChildren(element);
 
   // 이벤트를 등록합니다.
   setupEventListeners(container);
