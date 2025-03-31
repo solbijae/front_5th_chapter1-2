@@ -8,17 +8,17 @@ const postForm = (content) => {
     author: currentUser.username,
     content: content,
     likeUsers: [],
-    time: Date.now()
-  }
-  globalStore.setState({ posts: [...posts, post]})
-}
+    time: Date.now(),
+  };
+  globalStore.setState({ posts: [...posts, post] });
+};
 
 export const PostForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const content = document.getElementById("post-content").value;
     postForm(content);
-  }
+  };
   return (
     <div className="mb-4 bg-white rounded-lg shadow p-4">
       <textarea
