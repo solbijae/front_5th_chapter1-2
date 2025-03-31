@@ -20,8 +20,6 @@ function like(id) {
     post.activationLike = true;
   }
   globalStore.setState({ posts });
-
-  console.log(document.querySelectorAll("#posts-container .like-button")[0].outerHTML)
 }
 
 export const Post = ({
